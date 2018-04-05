@@ -1,0 +1,75 @@
+
+*{	
+	box-sizing:border-box;
+	margin:0 auto;
+	padding:0;
+}
+
+
+body{
+	background-color: #00ff001C;
+	height:100%;
+}
+
+
+header{
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100px;
+
+
+}
+
+.bgimage {
+  background-image: url('../images/him-image.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 1000px;
+}
+
+header h1{
+	color:white;
+	font-weight: bold;
+	text-align:center;
+	vertical-align:middle;
+	padding:15px;
+}
+
+header h2{
+	color:yellow;
+	font-weight:bold;
+	line-height:8em;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.leftsec {
+  width: 20%;
+  height:100%;
+  float:left;
+}
+.rightsec{
+	float:right;
+	width: 80%;
+	 height:100%;
+}
+
+h3{
+	padding:25px;
+	color:black;
+	font-weight: bold;;
+}
+.leftsec ol li a{
+	line-height:3em;
+	color:darkgreen;
+}
+
+.mainsec h1 {
+	color:white;
+	line-height:2em;
+}
+
+.mainsec p{
+	color:grey;
+	line-height:2em;
+}
+
