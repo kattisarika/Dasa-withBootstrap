@@ -9,17 +9,20 @@
 <body>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
-<header class="bgimage">
-	<div class="container">
-		<h1>DASARA PADAGALU</h1>
-		<h2>Prayers + Actions = Services To The Almighty</h2>
-	</div>
-</header>
- 
+
+ <header class="bgimage">
+			<div class="container">
+				<h1>DASARA PADAGALU</h1>
+				<h2>Prayers + Actions = Services To The Almighty</h2>
+			</div>
+		</header>
 	
 	<div class="container">
+		
 			
 			<div class="row">
+
+
 				<div class="leftsec">
 					<section class="col-xs-12">
 
@@ -33,8 +36,93 @@
 				  			</ol>	
 				  			 </section>
 	  		   </div>
+	  		
+	  		
 				<div class="rightsec">
-					<section class="col-xs-12">
+
+					<div class="row">
+
+						<div class="col-md-12 col-md-offset-10">
+					<button type="button" class="btn btn-default" id="home" style="background:grey;color:yellow;margin-left:10px;margin-top:10px">Home </button>
+                    <button type="button" class="btn btn-default" id="yoursong" style="background:grey;color:yellow;margin-left:10px;margin-top:10px">Your Song </button>
+					  
+					<button type="button" class="btn btn-default"  id="login" style="background:grey;color:yellow;margin-left:10px;margin-top:10px" >Login </button>
+					
+					<button type="button" class="btn btn-default" id="contactus" style="background:grey;color:yellow;margin-left:10px;margin-top:10px">Contact Us</button>
+					</div>
+					</div>
+
+					<section class="col-xs-8">
+						       <div class="contactus">
+									<div class="row">
+						  			 <div class="login-form">
+						   			<form action="/examples/actions/sendmail.php" method="post">
+							        	<h2 class="text-center">Contact Us</h2>       
+							        	<div class="form-group">
+							            <input type="text" class="form-control"  placeholder="Username" required="required">
+							        	</div>
+							        		<div class="form-group">
+							         	    <input type="text" class="form-control"  placeholder="Email" required="required">
+							            </div>
+							            <div class="form-group">
+							            <textarea class="form-control" rows="10"  placeholder="Comment" id="comment" required="required"></textarea>
+							            </div>
+							            <div class="form-group">
+							            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+							            </div>
+							              
+						         </form>
+					        	</div>
+					        </div>
+					       </div>
+
+					       <div class="login">
+							<div class="row">
+					          <div class="login-form">
+					   	        <form action="/examples/actions/confirmation.php" method="post">
+					            <h2 class="text-center">Log in</h2>       
+					            <div class="form-group">
+					            <input type="text" class="form-control" placeholder="Username" required="required">
+					          </div>
+					          <div class="form-group">
+					            <input type="password" class="form-control" placeholder="Password" required="required">
+					          </div>
+					         <div class="form-group">
+					            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+					          </div>
+					          <div class="clearfix">
+					            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+					            <a href="#" class="pull-right">Forgot Password?</a>
+					            </div>        
+					         </form>
+					        </div>
+					    </div>
+					</div>
+
+
+					 <div class="yoursong">
+					        <div class="row">
+					   		<div class="login-form">
+					   		<form action="/examples/actions/sendmail.php" method="post">
+					        <h2 class="text-center">Submit Your Song</h2>       
+					        <div class="form-group">
+					            <input type="text" class="form-control" placeholder="Name" required="required">
+					        </div>
+					        <div class="form-group">
+					            <input type="text" class="form-control" placeholder="Email" required="required">
+					        </div>
+					        <div class="form-group">
+					             <textarea class="form-control" rows="10" placeholder="Post Your Song / Writing" id="songName" required="required"></textarea>
+					        </div>
+					        <div class="form-group">
+					            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+					        </div>
+					             
+					   	 	</form>
+					   	 </div>
+					    </div>
+					</div>
+
 					 	<div  class="showsong" id="mainsongs">
 							<h3>Akashat Patitam Toyam Yatha Gacchati Sagaram |<br>
 				               Sarva Deva Namaskaram Keshavam PratiGacchati ||</h3>
@@ -54,6 +142,7 @@
 									Interpretation 3: <br>
 									Approaches and Origins may be different but the destination is the same.
 					             </p>
+					             <p>Intepretations and meanings are taken from a 3rd party website</p>
 				         	</div>
 	         	     </div>
 
@@ -168,8 +257,10 @@
 	         	   </div>
 	        
          	</div>
+
+         	  
 		</div>  
-		
+	<div class="row" style="background:grey"><div class="col-xs-12 footer">FOOTER</div></div></body>	
 
 </body>
 </html>
