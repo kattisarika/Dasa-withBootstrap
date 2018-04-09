@@ -10,31 +10,48 @@
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js">
+
       
-        $(document).ready(function(){
-             var from,to,toemail,subject,text,comment;
-             $("#contactus").click(function(){      
-              toemail="$("#toemail").val()";
-              subject="from $("#username").val();"
-              text="$("toemail").val()  $("#comment").val()";
-              $("#message").text("Sending E-mail...Please wait");
-              console.log(to);
-              $.get("http://localhost:5000/send",{to:toemail,subject:subject,text:text},function(data){
-              if(data=="sent")
-                {
-                 $("#message").empty().html("
-                    Email is been sent at "+to+" . Please check inbox!");
-                 }
-
-                });
-            });
-        });
-
-
     </script>
 </head>
 
 <body>
+    <script type="text/javascript">
+// Get the element with id="defaultOpen" and click on it
+//document.getElementById("defaultOpen").click(); 
+
+function openCity(evt, language) {
+    
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+   
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(language).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+
+
+function openLanguage(evt, language) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(language).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+</script>
     <header class="bgimage">
         <div class="container">
             <h1>DASARA PADAGALU</h1>
@@ -44,43 +61,34 @@
 
     <!--<div class="container">-->
     <div class="container-fluid" style="padding:0;">
-       
-                        <button type="button" class="btn btn-link" id="English" style="background:red;color:white;margin-top:10px;text-transform:uppercase">English </button>
-                        <button type="button" class="btn btn-link" id="yoursong" style="background:orange;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Hindi </button>
 
-                        <button type="button" class="btn btn-link" id="login" style="background:blue;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Kannada </button>
+                 <button type="button" class="btn btn-dark" id="home" style="margin-left:10px;margin-top:10px">Home </button>
 
-                        <button type="button" class="btn btn-link" id="contactus" style="background:green;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Telugu</button>
+                  <button type="button" class="btn btn-dark" id="yoursong" style="margin-left:10px;margin-top:10px">Your Song </button>
 
-                        <button type="button" class="btn btn-link" id="contactus" style="background:purple;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Tamil</button>
+                   <button type="button" class="btn btn-dark" id="login" style="margin-left:10px;margin-top:10px">Login </button>
 
-                         <button type="button" class="btn btn-link" id="contactus" style="background:brown;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Malyalam</button>
+                   <button type="button" class="btn btn-dark" id="home" style="margin-left:10px;margin-top:10px">About us </button>
 
-                          <button type="button" class="btn btn-link" id="contactus" style="background:darkred;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Marathi</button>
-
-                           <button type="button" class="btn btn-link" id="contactus" style="background:grey;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Sanskrit</button>
- 
-                          <button type="button" class="btn btn-dark" id="home" style="margin-left:10px;margin-top:10px">Home </button>
-
-                          <button type="button" class="btn btn-dark" id="yoursong" style="margin-left:10px;margin-top:10px">Your Song </button>
-
-                          <button type="button" class="btn btn-dark" id="login" style="margin-left:10px;margin-top:10px">Login </button>
-
-                          <button type="button" class="btn btn-dark" id="home" style="margin-left:10px;margin-top:10px">About us </button>
-
-                          <button type="button" class="btn btn-dark" id="contactus" style="margin-left:10px;margin-top:10px">Contact Us</button>
-                           
+                   <button type="button" class="btn btn-dark" id="contactus" style="margin-left:10px;margin-top:10px">Contact Us</button>
+      
                      </div>
 
            <div class="container-fluid" style="padding:0;">
+                <b>NOTE : ALL THE DATA AND AUDIO HAS BEEN GRABBED FROM 3rd PARTY WEB-SITES  </b>
+
                <div class="row" style="margin-left:20px;padding:0">
                     <div class="col-sm-2" style="padding:0" >
                         <h3>Songs</h3>
                             <ol>
                             <li><a href="#mahaastakam">Mahalakshmi Astakam ...</a></li>
                             <li><a href="#lakshmisong" class="fa fa fa-times closer">ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ...</a></li>
+                            <li><a href="#jaya">Jaya Mangalam ...</a></li>
                             <li><a href="#ada">Adalu Pogona ...</a></li>
                             <li><a href="#ramanama">Rama Naama Paaysakke ...</a></li>
+                            <li><a href="#olithe">Olithe Aayithu ...</a></li>
+                            <li><a href="#baagilanu">Baagilanu teredu ...</a></li>
+
                             </ol>
                     </div>
                     <div class="col-sm-9" style="padding:0">
@@ -181,18 +189,179 @@
                         </div>
                     </div> <!--showsong-->
 
+                    <div class="showsong1" id="jaya">
+                           <div class="row"  style="margin-top:10px;padding:20px">
+                            <div class="col-sm-9" style="padding:0;background:#e6e6e6;text-align:center">
+                            <h3>Jaya Mangalam</h3>
+                                <audio controls>
+                                <source src="mp3/Jayamangalam.mp3"  type="audio/mpeg">
+                                </audio>
+                                <br>
+                                 </div>
+                            </div>
+                           
+                           <div class="tab">
+                                  <button class="tablinks" onclick="openCity(event,'English')" >English</button>
+                                  <button class="tablinks" onclick="openCity(event,'Hindi')">Hindi</button>
+                                  <button class="tablinks" onclick="openCity(event,'Gujurati')">Gujurati</button>
+                                   <button class="tablinks" onclick="openCity(event,'Kannada')" id="defaultOpen">Kannada</button>
+                                   <button class="tablinks" onclick="openCity(event,'Telugu')">Telugu</button>
+                                   <button class="tablinks" onclick="openCity(event,'Tamil')">Tamil</button>
+                                   <button class="tablinks" onclick="openCity(event,'Malyalam')">Malyalam</button>
+                                   <button class="tablinks" onclick="openCity(event,'Marathi')">Marathi</button>
+                                   <button class="tablinks" onclick="openCity(event,'Sanskrit')">Sanskrit</button>
+                             </div>
+                          
+                            <div id="English" class="tabcontent">  
+                                <p> Jaya Mangalam nithya subha mangalam </p>
+
+                                <p>Indeevarakshage/ibharaajavaradage/</p>
+                                <p>Indira ramana/govinda harige/</p>
+                                <p>nandanakandage/navaneetha chorage/</p>
+                                <p>vrundara kendra/udupiya krishnage/ |jaya|</p>
+
+                                <p>ksheerabdivaasage / kshithijana paalage/</p>
+                                <p>maarana padedha / mangala moorthige/</p>
+                                <p>chaarucharanagalinda / cheluva gangeya padedha/</p>
+                                <p>kaarunya moorthy / kausthubha daarige/ |jaya|</p>
+
+                                <p>vyasaavatharage / veda udharage /</p>
+                                <p>vaasithanantha pada/ sakaleshage/</p>
+                                <p>vaasudevamoorthy purandara vittalage/</p>
+                                <p>daasara kaayva / rukminee ramanage/ |jaya|</p>
+                            </div>
+
+                             <div id="Hindi" class="tabcontent">
+                              </div>
+                             <div id="Gujurati" class="tabcontent">
+                               </div>
+                             <div id="Kannada" class="tabcontent">
+                             </div>
+                             <div id="Tamil" class="tabcontent">
+                             </div>
+                            <div id="Telugu" class="tabcontent">
+                             </div>
+                             <div id="Malyalam" class="tabcontent">
+                            </div>
+                             <div id="Marathi" class="tabcontent">
+                            </div>
+                            <div id="Sanskrit" class="tabcontent">
+                            </div>
+                    </div>    
+
+
+
+                     <div class="showsong1" id="olithe">
+                         <div class="row"  style="margin-top:10px;padding:20px">
+                         <div class="col-sm-9" style="padding:0;background:#e6e6e6;text-align:center">
+                            <h3>Adadella olithe aayithu</h3>
+                               <audio controls>
+                                    <source src="mp3/Navakoti.mp3"  type="audio/mpeg">
+                                </audio>
+                                <br>
+                                 </div>
+                            </div>
+
+                             <div class="tab">
+                                  <button class="tablinks" onclick="openCity(event,'English')" >English</button>
+                                  <button class="tablinks" onclick="openCity(event,'Hindi')">Hindi</button>
+                                  <button class="tablinks" onclick="openCity(event,'Gujurati')">Gujurati</button>
+                                   <button class="tablinks" onclick="openCity(event,'Kannada')" id="defaultOpen">Kannada</button>
+                                   <button class="tablinks" onclick="openCity(event,'Telugu')">Telugu</button>
+                                   <button class="tablinks" onclick="openCity(event,'Tamil')">Tamil</button>
+                                   <button class="tablinks" onclick="openCity(event,'Malyalam')">Malyalam</button>
+                                   <button class="tablinks" onclick="openCity(event,'Marathi')">Marathi</button>
+                                   <button class="tablinks" onclick="openCity(event,'Sanskrit')">Sanskrit</button>
+                             </div>
+
+                              <div id="English" class="tabcontent">  
+
+                                <p>Pallavi</p>
+                                <p>aadaddella oLithE aayithu namma</p>
+                                Sreedharana sEvege saadhana sampaththaayithu
+                                Anupallavi
+                                danDige beththa hiDiyuvudakke
+                                manDe maachi naachuthalidde
+                                henDathhi santhathi saaviravaagali
+                                danDige beththa hiDisidaLayya
+                                (aadadella)
+
+                                Charanam
+                                gopaLa butti hiDiyuvudakke
+                                bhoopathiyanthe garvisuthidde
+                                gopaLa butti hidisidaLayya
+                                (aadadella)
+                                thuLasee maleya haakuvudakke
+                                arasanaagi naachuthalidde
+                                sarasijaaksha Sree purandara viThalanu
+                                thuLasee maleya haakidanayya
+                                (aadadella)
+
+                              </div>
+
+                             <div id="Hindi" class="tabcontent">
+                              </div>
+                             <div id="Gujurati" class="tabcontent">
+                               </div>
+                             <div id="Kannada" class="tabcontent">
+                             </div>
+                             <div id="Tamil" class="tabcontent">
+                             </div>
+                            <div id="Telugu" class="tabcontent">
+                             </div>
+                             <div id="Malyalam" class="tabcontent">
+                                പല്ലവി
+                                ആദദ്ദെല്ല ഒളിതേ ആയിതു നമ്മ
+                                ശ്രീധരന സേവെഗെ സാധന സമ്പത്തായിതു
+                                അനുപല്ലവി
+                                ദന്‍ഡിഗെ ബെത്ത ഹിഡിയുവുദക്കെ
+                                മന്‍ഡെ മാചി നാചുതലിദ്ദെ
+                                ഹെന്‍ഡഥി സന്തതി സാവിരവാഗലി
+                                ദന്‍ഡിഗെ ബെത്ത ഹിഡിസിദളയ്യ
+                                (ആദദെല്ല)
+
+                                ചരണം
+                                ഗൊപള ബുട്ടി ഹിഡിയുവുദക്കെ
+                                ഭൂപതിയന്തെ ഗര്‍വിസുതിദ്ദെ
+                                ഗൊപള ബുട്ടി ഹിദിസിദളയ്യ
+                                (ആദദെല്ല)
+                                തുളസീ മലെയ ഹാകുവുദക്കെ
+                                അരസനാഗി നാചുതലിദ്ദെ
+                                സരസിജാക്ഷ ശ്രീ പുരന്ദര വിഠലനു
+                                തുളസീ മലെയ ഹാകിദനയ്യ
+                                (ആദദെല്ല)
+                            </div>
+                             <div id="Marathi" class="tabcontent">
+                            </div>
+                            <div id="Sanskrit" class="tabcontent">
+                            </div>
+                    </div>    
+                   
+
 
                     <div class="showsong1" id="mahaastakam">
-
-
-                        <div class="english">
-                           
-                            <h3>MAHA LAKSHMI ASTAKAM</h3>
-
-                             <audio controls>
+                      <div class="row"  style="margin-top:10px;padding:20px">
+                         <div class="col-sm-9" style="padding:0;background:#e6e6e6;text-align:center">
+                             <h3>MAHA LAKSHMI ASTAKAM</h3>
+                               <audio controls>
                                     <source src="mp3/MAHALAKSHMI STUTHI.mp3" type="audio/mpeg">
                                 </audio>
-
+                            <br>
+                            </div>
+                        </div>
+                           
+                         <div class="tab">
+                              <button class="tablinks" onclick="openLanguage(event,'English')" >English</button>
+                              <button class="tablinks" onclick="openLanguage(event,'Hindi')">Hindi</button>
+                              <button class="tablinks" onclick="openLanguage(event,'Gujurati')">Gujurati</button>
+                               <button class="tablinks" onclick="openLanguage(event,'Kannada')" id="defaultOpen">Kannada</button>
+                               <button class="tablinks" onclick="openLanguage(event,'Telugu')">Telugu</button>
+                               <button class="tablinks" onclick="openLanguage(event,'Tamil')">Tamil</button>
+                               <button class="tablinks" onclick="openLanguage(event,'Malyalam')">Malyalam</button>
+                               <button class="tablinks" onclick="openLanguage(event,'Marathi')">Marathi</button>
+                               <button class="tablinks" onclick="openLanguage(event,'Sanskrit')">Sanskrit</button>
+                        </div>
+                          <div id="English" class="tabcontent">   
                             <p>Namastestu Mahaa-Maaye Shrii-Piitthe Sura-Puujite |</p>
                             <p> Shangkha-Cakra-Gadaa-Haste Mahaalakssmi Namostute ||1||</p>
                             <br>
@@ -227,54 +396,220 @@
                             <p>Trikaalam Yah Patthennityam Mahaashatruvinaashanam |</p>
                             <p>Mahaalakssmirbhavennityam Prasannaa Varadaa Shubhaa ||11||</p>
 
-                            <p> <b>Watch the song on youtube by click the link <a href="https://www.youtube.com/watch?v=Tp_WZbKFQ_g" target="_blank">MAHA LAKSHMI STUTHI</a></b> </p>
                         </div>
+
+                             <div id="Hindi" class="tabcontent">
+                            
+                             </div>
+
+                             <div id="Gujurati" class="tabcontent">
+                         
+                             </div>
+
+                              <div id="Kannada" class="tabcontent">
+                              </div>
+
+                               <div id="Tamil" class="tabcontent">
+                         
+                                </div>
+
+                                <div id="Telugu" class="tabcontent">
+                         
+                                </div>
+
+                                 <div id="Malyalam" class="tabcontent">
+                        
+                                 </div>
+                                 <div id="Marathi" class="tabcontent">
+                         
+                                </div>
+
+                                 <div id="Sanskrit" class="tabcontent">
+                         
+                                 </div>
+
+                            <p> <b>Watch the song on youtube by click the link <a href="https://www.youtube.com/watch?v=Tp_WZbKFQ_g" target="_blank">MAHA LAKSHMI STUTHI</a></b> </p>
+                       
                     </div> <!--mahaastakam-->
 
-                     <div class="showsong1" id="lakshmisong">
-                        <div class="english">
+                        
 
+                     <div class="showsong1" id="baagilanu">
+
+                         <div class="row"  style="margin-top:10px;padding:20px">   
+                          <div class="col-sm-9" style="padding:0;background:#e6e6e6;text-align:center">
+                            <h3>Baagilanu Teredu</h3>
+                             <audio controls >
+                                <source src="mp3/Baagilanu.mp3" type="audio/mpeg">
+                               </audio>    
+                            <br>
+                            </div>
+                         </div> 
+
+                          <div class="tab">
+                          <button class="tablinks" onclick="openLanguage(event, 'English')" id="defaultOpen">English</button>
+                          <button class="tablinks" onclick="openLanguage(event, 'Hindi')">Hindi</button>
+                          <button class="tablinks" onclick="openLanguage(event, 'Gujurati')">Gujurati</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Kannada')" id="defaultOpen">Kannada</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Telugu')">Telugu</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Tamil')">Tamil</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Malyalam')">Malyalam</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Marathi')">Marathi</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Sanskrit')">Sanskrit</button>
+                        </div>
+
+                            <div id="English" class="tabcontent">  
+                            </div>
+
+                             <div id="Hindi" class="tabcontent">
+                              </div>
+                             <div id="Gujurati" class="tabcontent">
+                               </div>
+                             <div id="Kannada" class="tabcontent">
+                               <p> ರಚನೆ: ಕನಕದಾಸರು </p>
+
+                                <p>ಬಾಗಿಲನು ತೆರೆದು ಸೇವೆಯನು ಕೊಡೊ ಹರಿಯೆ</p>
+                                <p>ಕೂಗಿದರು ಧ್ವನಿ ಕೇಳಲಿಲ್ಲವೇ ನರಹರಿಯೇ</p>
+
+                                <p>ಪರಮಪದದೊಳಗೆ ವಿಷಧರನ ತಲ್ಪದಲಿ ನೀ</p>
+                                <p>ಸಿರಿಸಹಿತ ಕ್ಷೀರವಾರುಧಿಯೊಳಿರಲು</p>
+                                <p>ಕರಿರಾಜ ಕಷ್ಟದಲಿ ಆದಿಮೂಲಾ ಎಂದು</p>
+                                <p>ಕರೆಯಲಾಕ್ಷಣ ಬಂದು ಒದಗಿದೆಯೋ ನರಹರಿಯೇ ೧</p>
+
+                                <p>ಕಡು ಕೋಪದಲಿ ಖಳನು ಖಡುಗವನು ಹಿಡಿದು</p>
+                                <p>ನಿನ್ನೊಡೆಯನೆಲ್ಲಿಹನು ಎಂದು ನುಡಿಯೇ</p>
+                                <p>ದೃಢ ಭಕಿಯಲಿ ಶಿಶುವು ಬಿಡದೆ ನಿನ್ನನು ಭಜಿಸೆ</p>
+                                <p>ಸಡಗರದಿ ಕಂಭದಿಂದೊಡೆದೆಯೋ ನರಹರಿಯೇ೨</p>
+
+                                <p>ಯಮಸುತನ ರಾಣಿಗೆ ಅಕ್ಷಯವಸನವಿತ್ತೆ</p>
+                                <p>ಸಮಯದಲಿ ಅಜಮಿಳನ ಪೊರೆದೆ</p>
+                                <p>ಸಮಯಾಸಮಯವುಂಟೆ ಭಕ್ತವತ್ಸಲ ನಿನಗೆ</p>
+                                <p>ಕಮಲಾಕ್ಷ ಕಾಗಿನೆಲೆಯಾದಿ ಕೇಶವನೆ೩</p>
+                             </div>
+                             <div id="Tamil" class="tabcontent">
+                             </div>
+                            <div id="Telugu" class="tabcontent">
+                             </div>
+                             <div id="Malyalam" class="tabcontent">
+                            </div>
+                             <div id="Marathi" class="tabcontent">
+                            </div>
+                            <div id="Sanskrit" class="tabcontent">
+                            </div>
+                        <p><b>Watch the song on youtube by click the link <a href="https://www.youtube.com/watch?v=UTdGJE0-v3w" target="_blank">Baagilanu Teredu</a></b></p>
+                     </div>   
+
+
+
+                     <div class="showsong1" id="lakshmisong">
+
+                        <div class="row"  style="margin-top:10px;padding:20px">   
+                          <div class="col-sm-9" style="padding:0;background:#e6e6e6;text-align:center">
                             <h3>ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ</h3>
-                               <audio controls>
+                             <audio controls >
                                 <source src="mp3/EnuDhanyaLoLakumi.mp3" type="audio/mpeg">
                                </audio>    
                             <br>
-                           
+                            </div>
+                         </div> 
+
+                        <div class="tab">
+                          <button class="tablinks" onclick="openLanguage(event, 'English')" id="defaultOpen">English</button>
+                          <button class="tablinks" onclick="openLanguage(event, 'Hindi')">Hindi</button>
+                          <button class="tablinks" onclick="openLanguage(event, 'Gujurati')">Gujurati</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Kannada')" id="defaultOpen">Kannada</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Telugu')">Telugu</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Tamil')">Tamil</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Malyalam')">Malyalam</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Marathi')">Marathi</button>
+                           <button class="tablinks" onclick="openLanguage(event, 'Sanskrit')">Sanskrit</button>
+                        </div>
+
+                        <div id="English" class="tabcontent">
+                            <p>Enu dhanyalo lakumi yentha maanyalo</p>
+                            <p>saanuraagadinda hariya taane seve maadu tihalu||p||</p>
+
+                            <p>koti koti bhrityariralu | haatakaambarana seve |</p>
+                            <p>saatiyillade maadi | poorna nootadindha sukhisutihalu ||1||</p>
+
+                            <p>chhatra chaamara vyajana pariyanka | paatra roopadalli nintu |</p>
+                            <p>chitra charita naada hariya | nithya seve maadutihalu ||2||</p>
+
+                            <p>sarvasthaladhi vyaaptanaada | sarva dosharahitanaada |</p>
+                            <p>sarva vandhyanaada purandara vittalanna sevisuvalo ||3||</p>
+                        </div>
+
+                        <div id="Hindi" class="tabcontent">     
+                         </div>
+
+                        <div id="Gujurati" class="tabcontent">                         
+                        </div>
+
+                        <div id="Kannada" class="tabcontent">
+                            <h3>ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ</h3>
                             <p>ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ</p>
-                              <p>  ಎಂಥ ಮಾನ್ಯಳೋ</p>
-                               <p> ಸಾನುರಾಗದಿಂದ ಹರಿಯ</p>
-                              <p>ತಾನೆ ಸೇವೆ ಮಾಡುತಿಹಳೋ ||ಪ|</p>
-                            <br>
+                            <p>  ಎಂಥ ಮಾನ್ಯಳೋ</p>
+                            <p> ಸಾನುರಾಗದಿಂದ ಹರಿಯ</p>
+                            <p>ತಾನೆ ಸೇವೆ ಮಾಡುತಿಹಳೋ ||ಪ|</p>
+                             <br>
                             <p>ಕೋಟಿ ಕೋಟಿ ಭೃತ್ಯರಿರಲು</p>
-                             <p> ಹಾಟಕಾಂಬರನ ಸೇವೆ </p>
-                             <p>ಸಾಟಿಯಿಲ್ಲದೆ ಮಾಡಿ</p>
-                             <p>ಪೂರ್ಣನೋಟದಿಂದ ಸುಖಿಸುತಿಹಳೋ || ೧||</p>
-                            <br>
+                            <p> ಹಾಟಕಾಂಬರನ ಸೇವೆ </p>
+                            <p>ಸಾಟಿಯಿಲ್ಲದೆ ಮಾಡಿ</p>
+                            <p>ಪೂರ್ಣನೋಟದಿಂದ ಸುಖಿಸುತಿಹಳೋ || ೧||</p>
+                             <br>
                             <p>ಛತ್ರ ಚಾಮರ ವ್ಯಜನ ಪರ್ಯಂಕ </p>
                             <p>ಪಾತ್ರರೂಪದಲ್ಲಿ ನಿಂತು </p>
                             <p>ಚಿತ್ರಚರಿತನಾದ ಹರಿಯ</p>
                             <p>ನಿತ್ಯಸೇವೆ ಮಾಡುತಿಹಳೋ ||೨||</p>
                             <br>
                             <p>ಸರ್ವಸ್ಥಳದಿ ವ್ಯಾಪ್ತನಾದ </p>
-                             <p>   ಸರ್ವದೋಷರಹಿತನಾದ </p>
+                            <p>   ಸರ್ವದೋಷರಹಿತನಾದ </p>
                             <p>ಸರ್ವವಂದ್ಯನಾದ ಪುರಂದರ</p>
                             <p>ವಿಟ್ಠಲನ್ನ ಸೇವಿಸುವಳೋ ||೩||</p> 
-
-                            </p>
-                            <br>
                         </div>
+
+                         <div id="Tamil" class="tabcontent">        
+                        </div>
+
+                         <div id="Telugu" class="tabcontent">                  
+                        </div>
+
+                         <div id="Malyalam" class="tabcontent">                      
+                        </div>
+
+                         <div id="Marathi" class="tabcontent">
+                        </div>
+
+                         <div id="Sanskrit" class="tabcontent">        
+                        </div>
+                            
                     </div>  <!--lakshmi song-->
 
                       <div class="showsong1" id="ada">
-
-                        <div class="english">
-                            <br>
-                           <h3>Aada Pogona Baro Ranga</h3>
+                         <div class="row"  style="margin-top:10px;padding:20px">
+                            <div class="col-sm-9" style="padding:0;background:#e6e6e6;text-align:center">
+                                <h3>Aada Pogona Baro Ranga</h3>
                                 <audio controls>
                                     <source src="mp3/Ada Pogona Baro Ranga.mp3" type="audio/mpeg">
                                 </audio>    
-                            <br>
-                            <p>aada pogona baro ranga</p>
+                                 <br>
+                            </div>
+                        </div>
+
+                         <div class="tab">
+                          <button class="tablinks" onclick="openCity(event, 'English')" id="defaultOpen">English</button>
+                          <button class="tablinks" onclick="openCity(event, 'Hindi')">Hindi</button>
+                          <button class="tablinks" onclick="openCity(event, 'Gujurati')">Gujurati</button>
+                           <button class="tablinks" onclick="openCity(event, 'Kannada')" >Kannada</button>
+                           <button class="tablinks" onclick="openCity(event, 'Telugu')">Telugu</button>
+                           <button class="tablinks" onclick="openCity(event, 'Tamil')">Tamil</button>
+                           <button class="tablinks" onclick="openCity(event, 'Malyalam')">Malyalam</button>
+                           <button class="tablinks" onclick="openCity(event, 'Marathi')">Marathi</button>
+                           <button class="tablinks" onclick="openCity(event, 'Sanskrit')">Sanskrit</button>
+                        </div>
+
+                         <div id="English" class="tabcontent">
+                             <p>aada pogona baro ranga</p>
                             <p>kudi yamuna teeradalli| </p>
                             <br>
                             <p>aada pogona baaro [p] </p>
@@ -291,18 +626,68 @@
                             <br>
                             <p>rajyavannu bidabekante ramgavittala barabekante[c3]</p>
                             <br>
+                         </div>  
 
+                         <div id="Hindi" class="tabcontent">
+                            
+                          </div>
+
+                         <div id="Gujurati" class="tabcontent">
+                         
+                           </div>
+
+                          <div id="Kannada" class="tabcontent">
+                          </div>
+
+                          <div id="Tamil" class="tabcontent">
+                         
+                           </div>
+
+                           <div id="Telugu" class="tabcontent">
+                         
+                           </div>
+
+                           <div id="Malyalam" class="tabcontent">
+                        
+                            </div>
+                            <div id="Marathi" class="tabcontent">
+                         
+                            </div>
+
+                            <div id="Sanskrit" class="tabcontent">
+                         
+                             </div>
+ 
                             <p>Watch the song on youtube by click the link
                                 <a href="https://www.youtube.com/watch?v=N7CC5Wgtzd0" target="_blank">Ada Pogona</a> </p>
                         </div>
                     </div> <!--ada -->
                      <div class="showsong1" id="ramanama">
 
-                        <div class="english">
-                            <h3>Rama Nama Payasakke</h3>
-                            <audio controls>
-                             <source src="mp3/rAmanAmapAyasake.mp3" type="audio/mpeg">
-                                  </audio>    
+                          <div class="row"  style="margin-top:10px;padding:20px">
+                            <div class="col-sm-9" style="padding:0;background:#e6e6e6;text-align:center">
+                                <h3>Rama Nama Payasakke</h3>
+                                <audio controls>
+                                     <source src="mp3/rAmanAmapAyasake.mp3" type="audio/mpeg">
+                                </audio>    
+                                 <br>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                                  <button class="tablinks" onclick="openCity(event,'English')" >English</button>
+                                  <button class="tablinks" onclick="openCity(event,'Hindi')">Hindi</button>
+                                  <button class="tablinks" onclick="openCity(event,'Gujurati')">Gujurati</button>
+                                  <button class="tablinks" onclick="openCity(event,'Kannada')" id="defaultOpen">Kannada</button>
+                                  <button class="tablinks" onclick="openCity(event,'Telugu')">Telugu</button>
+                                 <button class="tablinks" onclick="openCity(event,'Tamil')">Tamil</button>
+                                 <button class="tablinks" onclick="openCity(event,'Malyalam')">Malyalam</button>
+                                 <button class="tablinks" onclick="openCity(event,'Marathi')">Marathi</button>
+                                <button class="tablinks" onclick="openCity(event,'Sanskrit')">Sanskrit</button>
+                         </div>
+
+                         <div id="English" class="tabcontent">  
+
                             <br>
                             <p>RaMa nama payasake</p>
                             <p>krishna nama sakkare</p>
@@ -326,6 +711,27 @@
                             <p>viTalana neneyirO ....... ||RaMa||</p>
                             <br>
                         </div>
+
+                         <div id="Hindi" class="tabcontent">
+                          </div>
+                         <div id="Gujurati" class="tabcontent">
+                           </div>
+                         <div id="Kannada" class="tabcontent">
+                         </div>
+                         <div id="Tamil" class="tabcontent">
+                         </div>
+                        <div id="Telugu" class="tabcontent">
+                         </div>
+                         <div id="Malyalam" class="tabcontent">
+                        </div>
+                         <div id="Marathi" class="tabcontent">
+                        </div>
+                        <div id="Sanskrit" class="tabcontent">
+                        </div>
+
+
+                       
+                       
                     </div>
 
                   </div> <!--contentarea-->  
@@ -336,7 +742,7 @@
         <p> <span>&copy; Copyright 2018
             </span></p>
     </footer>
-
+ 
 </body>
 
 </html>
