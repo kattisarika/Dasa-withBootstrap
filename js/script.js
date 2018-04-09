@@ -1,16 +1,15 @@
 jQuery(document).ready(function ($) {
-    $('.showsong1').hide()
-    $('.contactus').hide()
-    $('.yoursong').hide()
-    $('.login').hide()
-    $('a[href^="#"]').on('click', function (event) {
-        $(".showsong").hide();
+   $('.showsong1').hide()
         $('.contactus').hide()
         $('.yoursong').hide()
         $('.login').hide()
-        var target = $(this).attr('href');
-        $('.showsong1' + target).toggle();
-    });
+        $('a[href^="#"]').on('click', function(event) {
+            $('.showsong').hide();
+            $('.showsong1') .hide();
+            var target = $(this).attr('href');
+            $('.showsong1'+target).toggle();
+        });
+        
 
 });
 

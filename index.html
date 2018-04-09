@@ -3,11 +3,34 @@
 
 <head>
     <title>Dasa</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+      
+        $(document).ready(function(){
+             var from,to,toemail,subject,text,comment;
+             $("#contactus").click(function(){      
+              toemail="$("#toemail").val()";
+              subject="from $("#username").val();"
+              text="$("toemail").val()  $("#comment").val()";
+              $("#message").text("Sending E-mail...Please wait");
+              console.log(to);
+              $.get("http://localhost:5000/send",{to:toemail,subject:subject,text:text},function(data){
+              if(data=="sent")
+                {
+                 $("#message").empty().html("
+                    Email is been sent at "+to+" . Please check inbox!");
+                 }
+
+                });
+            });
+        });
+
+
+    </script>
 </head>
 
 <body>
@@ -25,9 +48,8 @@
                     <h3>Songs</h3>
                     <ol>
                         <li><a href="#mahaastakam">Mahalakshmi Astakam ...</a></li>
-                        <li><a href="#lakshmisong" class="fa fa fa-times closer">Yeno Dhnayalo Lakumi...</a></li>
+                        <li><a href="#lakshmisong" class="fa fa fa-times closer">ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ...</a></li>
                         <li><a href="#ada">Adalu Pogona ...</a></li>
-                        <li><a href="">Guna vayithenyya bhava roga...</a></li>
                         <li><a href="#ramanama">Rama Naama Paaysakke ...</a></li>
                     </ol>
                 </section>
@@ -47,33 +69,33 @@
                 </div>
 
                 <section class="col-xs-8">
-                    <div class="contactus">
+                  <!--  <div class="contactus">
                         <div class="row">
                             <div class="login-form">
-                                <form action="/examples/actions/sendmail.php" method="post">
+                                <form action="/send-email"  method="post">
                                     <h2 class="text-center">Contact Us</h2>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Username" required="required">
+                                        <input type="text" id="username" class="form-control" placeholder="Username" required="required">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Email" required="required">
+                                        <input type="text" id="fromemail" class="form-control" placeholder="Email" required="required">
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="10" placeholder="Comment" id="comment" required="required"></textarea>
+                                        <textarea class="form-control" id="subject" rows="10" placeholder="Comment" id="comment" required="required"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                        <button type="submit" class="btn btn-primary btn-block" id="contactus">Send Email</button>
                                     </div>
-
+                                    <span id="message"></span>
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="login">
                         <div class="row">
                             <div class="login-form">
-                                <form action="/examples/actions/confirmation.php" method="post">
+                                <form action="/login" method="post">
                                     <h2 class="text-center">Log in</h2>
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Username" required="required">
@@ -98,7 +120,7 @@
                     <div class="yoursong">
                         <div class="row">
                             <div class="login-form">
-                                <form action="/examples/actions/sendmail.php" method="post">
+                                <form action="/songemail" method="post">
                                     <h2 class="text-center">Submit Your Song</h2>
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Name" required="required">
@@ -117,8 +139,9 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="contentarea">
                     <div class="showsong" id="mainsongs">
+                         
                         <h3>Akashat Patitam Toyam Yatha Gacchati Sagaram |<br>
                             Sarva Deva Namaskaram Keshavam PratiGacchati ||</h3>
                         <div class="english">
@@ -143,8 +166,16 @@
 
 
                     <div class="showsong1" id="mahaastakam">
+
+
                         <div class="english">
+                           
                             <h3>MAHA LAKSHMI ASTAKAM</h3>
+
+                             <audio controls>
+                                    <source src="mp3/MAHALAKSHMI STUTHI.mp3" type="audio/mpeg">
+                                </audio>
+
                             <p>Namastestu Mahaa-Maaye Shrii-Piitthe Sura-Puujite |</p>
                             <p> Shangkha-Cakra-Gadaa-Haste Mahaalakssmi Namostute ||1||</p>
                             <br>
@@ -185,25 +216,33 @@
 
                     <div class="showsong1" id="lakshmisong">
                         <div class="english">
-                            <h3>Enu Dhanyalo Lakumi</h3>
+
+                            <h3>ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ</h3>
+                               <audio controls>
+                                <source src="mp3/EnuDhanyaLoLakumi.mp3" type="audio/mpeg">
+                               </audio>    
                             <br>
-                            <p>
-                                Enu dhanyalo lakumi yentha maanyalo </p>
-                            <p>saanuraagadinda hariya taane seve maadu tihalu||p||</p>
+                           
+                            <p>ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ</p>
+                              <p>  ಎಂಥ ಮಾನ್ಯಳೋ</p>
+                               <p> ಸಾನುರಾಗದಿಂದ ಹರಿಯ</p>
+                              <p>ತಾನೆ ಸೇವೆ ಮಾಡುತಿಹಳೋ ||ಪ|</p>
                             <br>
-                            <p>
-                                koti koti bhrityariralu | haatakaambarana seve |</p>
-                            <p>saatiyillade maadi | poorna nootadindha sukhisutihalu ||1||
-                            </p>
+                            <p>ಕೋಟಿ ಕೋಟಿ ಭೃತ್ಯರಿರಲು</p>
+                             <p> ಹಾಟಕಾಂಬರನ ಸೇವೆ </p>
+                             <p>ಸಾಟಿಯಿಲ್ಲದೆ ಮಾಡಿ</p>
+                             <p>ಪೂರ್ಣನೋಟದಿಂದ ಸುಖಿಸುತಿಹಳೋ || ೧||</p>
                             <br>
-                            <p>
-                                chhatra chaamara vyajana pariyanka | paatra roopadalli nintu |</p>
-                            <p>chitra charita naada hariya | nithya seve maadutihalu ||2||
-                            </p>
+                            <p>ಛತ್ರ ಚಾಮರ ವ್ಯಜನ ಪರ್ಯಂಕ </p>
+                            <p>ಪಾತ್ರರೂಪದಲ್ಲಿ ನಿಂತು </p>
+                            <p>ಚಿತ್ರಚರಿತನಾದ ಹರಿಯ</p>
+                            <p>ನಿತ್ಯಸೇವೆ ಮಾಡುತಿಹಳೋ ||೨||</p>
                             <br>
-                            <p>
-                                sarvasthaladhi vyaaptanaada | sarva dosharahitanaada |</p>
-                            <p>sarva vandhyanaada purandara vittalanna sevisuvalo ||3||
+                            <p>ಸರ್ವಸ್ಥಳದಿ ವ್ಯಾಪ್ತನಾದ </p>
+                             <p>   ಸರ್ವದೋಷರಹಿತನಾದ </p>
+                            <p>ಸರ್ವವಂದ್ಯನಾದ ಪುರಂದರ</p>
+                            <p>ವಿಟ್ಠಲನ್ನ ಸೇವಿಸುವಳೋ ||೩||</p> 
+
                             </p>
                             <br>
                         </div>
@@ -213,7 +252,10 @@
 
                         <div class="english">
                             <br>
-                            <h3>Aada Pogona Baro Ranga</h3>
+                           <h3>Aada Pogona Baro Ranga</h3>
+                                <audio controls>
+                                    <source src="mp3/Ada Pogona Baro Ranga.mp3" type="audio/mpeg">
+                                </audio>    
                             <br>
                             <p>aada pogona baro ranga</p>
                             <p>kudi yamuna teeradalli| </p>
@@ -243,6 +285,9 @@
 
                         <div class="english">
                             <h3>Rama Nama Payasakke</h3>
+                            <audio controls>
+                             <source src="mp3/rAmanAmapAyasake.mp3" type="audio/mpeg">
+                                  </audio>    
                             <br>
                             <p>RaMa nama payasake</p>
                             <p>krishna nama sakkare</p>
@@ -267,7 +312,7 @@
                             <br>
                         </div>
                     </div>
-
+                 </div>
 
                 </section>
             </div>
@@ -276,10 +321,12 @@
 
     </div>
     <div class="footercontainer">
+
         <div id="footer" style="background:grey">
-            <div>&copy; Copyright 2018
-            </div>
+            <span>&copy; Copyright 2018
+            </span>
         </div>
+
     </div>
 
 </body>
