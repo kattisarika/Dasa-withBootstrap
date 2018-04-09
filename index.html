@@ -4,6 +4,7 @@
 <head>
     <title>Dasa</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -41,58 +42,50 @@
         </div>
     </header>
 
-    <div class="container">
-        <div class="row" style="margin-left:20px">
-            <div class="leftsec">
-                <section class="col-xs-12">
-                    <h3>Songs</h3>
-                    <ol>
-                        <li><a href="#mahaastakam">Mahalakshmi Astakam ...</a></li>
-                        <li><a href="#lakshmisong" class="fa fa fa-times closer">ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ...</a></li>
-                        <li><a href="#ada">Adalu Pogona ...</a></li>
-                        <li><a href="#ramanama">Rama Naama Paaysakke ...</a></li>
-                    </ol>
-                </section>
-            </div>
+    <!--<div class="container">-->
+    <div class="container-fluid" style="padding:0;">
+       
+                        <button type="button" class="btn btn-link" id="English" style="background:red;color:white;margin-top:10px;text-transform:uppercase">English </button>
+                        <button type="button" class="btn btn-link" id="yoursong" style="background:orange;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Hindi </button>
 
+                        <button type="button" class="btn btn-link" id="login" style="background:blue;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Kannada </button>
 
-            <div class="rightsec">
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-10">
-                        <button type="button" class="btn btn-default" id="home" style="background:grey;color:yellow;margin-left:10px;margin-top:10px">Home </button>
-                        <button type="button" class="btn btn-default" id="yoursong" style="background:grey;color:yellow;margin-left:10px;margin-top:10px">Your Song </button>
+                        <button type="button" class="btn btn-link" id="contactus" style="background:green;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Telugu</button>
 
-                        <button type="button" class="btn btn-default" id="login" style="background:grey;color:yellow;margin-left:10px;margin-top:10px">Login </button>
+                        <button type="button" class="btn btn-link" id="contactus" style="background:purple;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Tamil</button>
 
-                        <button type="button" class="btn btn-default" id="contactus" style="background:grey;color:yellow;margin-left:10px;margin-top:10px">Contact Us</button>
+                         <button type="button" class="btn btn-link" id="contactus" style="background:brown;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Malyalam</button>
+
+                          <button type="button" class="btn btn-link" id="contactus" style="background:darkred;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Marathi</button>
+
+                           <button type="button" class="btn btn-link" id="contactus" style="background:grey;color:white;margin-left:10px;margin-top:10px;text-transform:uppercase">Sanskrit</button>
+ 
+                          <button type="button" class="btn btn-dark" id="home" style="margin-left:10px;margin-top:10px">Home </button>
+
+                          <button type="button" class="btn btn-dark" id="yoursong" style="margin-left:10px;margin-top:10px">Your Song </button>
+
+                          <button type="button" class="btn btn-dark" id="login" style="margin-left:10px;margin-top:10px">Login </button>
+
+                          <button type="button" class="btn btn-dark" id="home" style="margin-left:10px;margin-top:10px">About us </button>
+
+                          <button type="button" class="btn btn-dark" id="contactus" style="margin-left:10px;margin-top:10px">Contact Us</button>
+                           
+                     </div>
+
+           <div class="container-fluid" style="padding:0;">
+               <div class="row">
+                    <div class="col-sm-2" style="margin-left:25px;padding:0">
+                        <h3>Songs</h3>
+                            <ol>
+                            <li><a href="#mahaastakam">Mahalakshmi Astakam ...</a></li>
+                            <li><a href="#lakshmisong" class="fa fa fa-times closer">ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ...</a></li>
+                            <li><a href="#ada">Adalu Pogona ...</a></li>
+                            <li><a href="#ramanama">Rama Naama Paaysakke ...</a></li>
+                            </ol>
                     </div>
-                </div>
+                    <div class="col-sm-9" style="padding:0">
 
-                <section class="col-xs-8">
-                  <!--  <div class="contactus">
-                        <div class="row">
-                            <div class="login-form">
-                                <form action="/send-email"  method="post">
-                                    <h2 class="text-center">Contact Us</h2>
-                                    <div class="form-group">
-                                        <input type="text" id="username" class="form-control" placeholder="Username" required="required">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" id="fromemail" class="form-control" placeholder="Email" required="required">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="subject" rows="10" placeholder="Comment" id="comment" required="required"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block" id="contactus">Send Email</button>
-                                    </div>
-                                    <span id="message"></span>
-                                </form>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <div class="login">
+                        <div class="login">
                         <div class="row">
                             <div class="login-form">
                                 <form action="/login" method="post">
@@ -114,7 +107,7 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div>  
 
 
                     <div class="yoursong">
@@ -139,13 +132,37 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contentarea">
-                    <div class="showsong" id="mainsongs">
-                         
-                        <h3>Akashat Patitam Toyam Yatha Gacchati Sagaram |<br>
+
+                    <div class="contactus">
+                        <div class="row">
+                            <div class="login-form">
+                                <form action="/send-email"  method="post">
+                                    <h2 class="text-center">Contact Us</h2>
+                                    <div class="form-group">
+                                        <input type="text" id="username" class="form-control" placeholder="Username" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="fromemail" class="form-control" placeholder="Email" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="subject" rows="10" placeholder="Comment" id="comment" required="required"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block" id="contactus">Send Email</button>
+                                    </div>
+                                    <span id="message"></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                     <div class="contentarea">
+                         <div class="showsong" id="mainsongs">  
+                          <h3>Akashat Patitam Toyam Yatha Gacchati Sagaram |<br>
                             Sarva Deva Namaskaram Keshavam PratiGacchati ||</h3>
-                        <div class="english">
-                            <p>
+                          <div class="english">
+                             <p>
                                 <br>
                                 <b>Interpretations:</b>
                                 <br> Literal meaning:
@@ -162,7 +179,7 @@
                             <p>Intepretations and meanings are taken from a 3rd party website.</p>
 
                         </div>
-                    </div>
+                    </div> <!--showsong-->
 
 
                     <div class="showsong1" id="mahaastakam">
@@ -212,9 +229,9 @@
 
                             <p> <b>Watch the song on youtube by click the link <a href="https://www.youtube.com/watch?v=Tp_WZbKFQ_g" target="_blank">MAHA LAKSHMI STUTHI</a></b> </p>
                         </div>
-                    </div>
+                    </div> <!--mahaastakam-->
 
-                    <div class="showsong1" id="lakshmisong">
+                     <div class="showsong1" id="lakshmisong">
                         <div class="english">
 
                             <h3>ಏನು ಧನ್ಯಳೋ ಲಕುಮಿ</h3>
@@ -246,9 +263,9 @@
                             </p>
                             <br>
                         </div>
-                    </div>
+                    </div>  <!--lakshmi song-->
 
-                    <div class="showsong1" id="ada">
+                      <div class="showsong1" id="ada">
 
                         <div class="english">
                             <br>
@@ -278,10 +295,8 @@
                             <p>Watch the song on youtube by click the link
                                 <a href="https://www.youtube.com/watch?v=N7CC5Wgtzd0" target="_blank">Ada Pogona</a> </p>
                         </div>
-                    </div>
-
-
-                    <div class="showsong1" id="ramanama">
+                    </div> <!--ada -->
+                     <div class="showsong1" id="ramanama">
 
                         <div class="english">
                             <h3>Rama Nama Payasakke</h3>
@@ -312,22 +327,15 @@
                             <br>
                         </div>
                     </div>
-                 </div>
 
-                </section>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="footercontainer">
-
-        <div id="footer" style="background:grey">
-            <span>&copy; Copyright 2018
-            </span>
-        </div>
-
-    </div>
+                  </div> <!--contentarea-->  
+                      </div> <!--End of col-sm-9-->
+              </div> <!--End of row -->    
+            
+    <footer class="container-fluid bg-4 text-center" style="background:red;color:white;padding:20px;bottom:0;margin-bottom:0px">
+        <p> <span>&copy; Copyright 2018
+            </span></p>
+    </footer>
 
 </body>
 
