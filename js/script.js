@@ -1,19 +1,34 @@
 jQuery(document).ready(function ($) {
-   $('.showsong1').hide()
+        $('.showsong1').hide()
         $('.contactus').hide()
         $('.yoursong').hide()
         $('.login').hide()
-        $('a[href^="#"]').on('click', function(event) {
-            $('.showsong').hide();
-            $('.showsong1') .hide();
-            var target = $(this).attr('href');
-            $('.showsong1'+target).toggle();
-        });
-        
+
+    $('.toggle').click(function() {
+        var $toggled = $(this).attr('href');
+        $($toggled).siblings(':visible').hide();
+        $($toggled).toggle("slide", {direction: 'up'}, 1000);
+        $($toggled).toggle();
+        return false;
+  });
+
+     
 
 });
 
+
+
 $(function () {
+
+
+
+
+$('#changetabbutton').click(function(e){
+         e.preventDefault();
+        $('#mytabs a[href="#second"]').tab('show');
+    })
+
+
 
     $("#home").on("click", function (e) {
         $(".yoursong").hide()
