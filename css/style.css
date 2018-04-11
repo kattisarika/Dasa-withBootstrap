@@ -119,9 +119,9 @@ body {
     height: 100%;
 }
 
-img {
+/*img {
     border: 2px solid black;
-}
+}*/
 
 h5,
 p {
@@ -187,3 +187,33 @@ p {
 .overlay:after {
     background: rgba(0, 0, 0, 0.75);
 }
+
+img{
+   margin-left:20px;
+   margin-right:20px;
+ border:2px solid rgba(0, 100, 0, 0.6);
+
+}
+.imagebox {
+   
+  padding: 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+}
+
+.imagebox img {
+  opacity: 1;
+  transition: 0.5s opacity;
+}
+
+
+
+.imagebox:hover img {
+ background-color: grey;
+  opacity: 0.5;
+
+}
+
+
